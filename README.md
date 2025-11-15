@@ -227,10 +227,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is open source and available under the MIT License.
 
-## 📧 Support
 
-For support, email support@eduverse.com or visit our website.
-
----
 
 Built with ❤️ using React & Vite
