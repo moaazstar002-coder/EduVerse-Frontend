@@ -1,0 +1,125 @@
+.filter-bar {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+body.dark .filter-bar {
+  background: var(--dark-surface);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.filter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+body.dark .search-box {
+  background: var(--dark-bg);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-box:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.search-box svg {
+  color: var(--text-secondary);
+}
+
+body.dark .search-box svg {
+  color: var(--dark-text-secondary);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.75rem 0.5rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+body.dark .search-box input {
+  color: var(--dark-text);
+}
+
+.search-box input::placeholder {
+  color: var(--text-secondary);
+}
+
+body.dark .search-box input::placeholder {
+  color: var(--dark-text-secondary);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+body.dark .filter-group label {
+  color: var(--dark-text);
+}
+
+.filter-group select {
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark .filter-group select {
+  background: var(--dark-bg);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--dark-text);
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .filter-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    grid-column: 1 / -1;
+  }
+}
